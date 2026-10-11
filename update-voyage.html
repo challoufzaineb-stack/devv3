@@ -1,0 +1,26 @@
+<div class="container">
+  <div>
+    <h2>Modifier un Voyage :</h2>
+  </div>
+  <form *ngIf="currentVoyage">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label>ID Voyage</label>
+      <input type="text" [(ngModel)]="currentVoyage.idVoyage" name="idVoyage" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Destination</label>
+      <input type="text" [(ngModel)]="currentVoyage.destination" name="destination" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label>Prix Voyage</label>
+      <input type="number" [(ngModel)]="currentVoyage.prixVoyage" name="prixVoyage" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Date Départ</label>
+      <input type="date" [(ngModel)]="currentVoyage.dateDepart" name="dateDepart" class="form-control">
+    </div>
+    <div class="mt-2">
+      <button type="submit" (click)="updateVoyage()" class="btn btn-success">Modifier</button>
+    </div>
+  </form>
+</div>

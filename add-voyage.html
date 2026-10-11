@@ -1,0 +1,26 @@
+<div class="container">
+  <div>
+    <h2>Ajouter un Voyage :</h2>
+  </div>
+  <form>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label>ID Voyage</label>
+      <input type="text" [(ngModel)]="newVoyage.idVoyage" name="idVoyage" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Destination</label>
+      <input type="text" [(ngModel)]="newVoyage.destination" name="destination" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label>Prix Voyage</label>
+      <input type="number" [(ngModel)]="newVoyage.prixVoyage" name="prixVoyage" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Date Départ</label>
+      <input type="date" [(ngModel)]="newVoyage.dateDepart" name="dateDepart" class="form-control">
+    </div>
+    <div class="mt-2">
+      <button type="submit" (click)="addVoyage()" class="btn btn-success">Ajouter</button>
+    </div>
+  </form>
+</div>
